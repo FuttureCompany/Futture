@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #0a1f44;
+  color: #ff7f00;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 8vh;
+  position: fixed;  
+  top: 0;  
+  left: 0;
+  right: 0;
+  z-index: 1000;  
+}
+
+header h1 {
+  margin: 0;
+  flex: 1;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+header nav a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+header nav a.active {
+  color: #ff7f00;
+}
+
+header .menu-icon {
+  display: none;  
+  font-size: 30px;
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Alinha os elementos em coluna */
+  min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
+  margin: 0; /* Remove margens padrão */
+}
+
+main {
+  flex: 1; /* Faz o main ocupar o espaço restante */
+  display: flex;
+  flex-direction: column; /* Alinha as seções em coluna */
+  padding: 2rem; /* Adiciona padding responsivo */
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem; /* Espaçamento entre os itens */
+  max-width: 1200px; /* Largura máxima */
+  width: 100%; /* Ocupa toda a largura disponível */
+  margin: 2rem auto; /* Margem superior e inferior */
+  padding: 2rem; /* Padding interno */
+  min-height: 40vh; /* Altura mínima responsiva */
+}
+
+.card, .summary {
+  flex: 1 1 calc(33.333% - 2rem); /* Cada card ocupa um terço menos o espaçamento */
+  border: 1px solid #ddd;
+  border-radius: 0.5rem; /* Bordas arredondadas */
+  padding: 1rem; /* Padding interno */
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  flex: 1 1 100%; /* Mantém a seção de formulário ocupando toda a largura */
+  margin-top: auto; /* Empurra a seção para o fundo do main */
+  padding: 2rem; /* Adiciona padding */
+  background-color: #f9f9f9; /* Fundo para destaque */
+  border-top: 1px solid #ddd; /* Linha superior para separar do conteúdo */
+}
+ 
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .card-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .card-icons img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 15px;
+  }
+  
+  input[type="text"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    } 
+    .menu {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .form-row {
+      flex-direction: column;
+    }
+   
+  .content {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .card, .summary {
+    flex: 1 1 100%; 
+  }
+
+  .form-section {
+    width: 100%; /
+  }
+    
+
+    header .menu-icon {
+        display: block;  
+    }
+
+    header nav {
+        display: none;  
+        flex-direction: column;
+        width: 100%;
+        background-color: #0a1f44;
+        position: absolute;
+        top: 8vh;  
+        left: 0;
+        padding: 10px;
+    }
+
+    header nav.active {
+        display: flex;  
+    }
+
+    header nav a {
+        padding: 10px;
+    }}
+
+    

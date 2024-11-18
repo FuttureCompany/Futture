@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0a1f44;
+    color: #ff7f00;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 10vh;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0; /* Fixa na parte superior */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Garante que o header fique acima do conteúdo */
+}
+
+header h1 {
+    margin: 0;
+    flex: 1;
+}
+
+header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header nav a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+header nav a.active {
+    color: #ff7f00;
+}
+
+header .menu-icon {
+    display: none; /* Inicialmente escondido */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    padding-top: 15vh; /* Espaçamento para que o conteúdo não fique sobre o cabeçalho fixo */
+
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #222121;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group label {
+    font-size: 0.875rem;
+    color: #001f3f;
+}
+
+.checkbox-group label a {
+    color: #001f3f;
+    text-decoration: underline;
+}
+
+.submit-btn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 320px;
+    align-self: center;
+}
+
+@media screen and (max-width: 800px) {
+    
+    header .menu-icon {
+        display: block; 
+    }
+
+    header nav {
+        display: none;  
+        flex-direction: column;
+        width: 100%;
+        background-color: #0a1f44;
+        position: absolute;
+        top: 7vh;  
+        left: 0;
+        padding: 10px;
+    }
+
+    header nav.active {
+        display: flex;   
+    }
+
+    header nav a {
+        padding: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        margin-left: 0;  
+        padding-top: 10vh;
+    }
+
+    .menu {
+        display: none;
+    }
+    
+    .menu-mobile {
+        display: flex;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,230 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    padding: 0 10px; /* Adiciona um pouco de padding */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0a1f44;
+    color: #ff7f00;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 8vh;
+    position: fixed;  
+    top: 0;   
+    left: 0;
+    right: 0;
+    z-index: 1000;  
+}
+
+header h1 {
+    margin: 0;
+    flex: 1;
+}
+
+header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header nav a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+header nav a.active {
+    color: #ff7f00;
+}
+
+header .menu-icon {
+    display: none;  
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.container {
+    padding: 20px; /* Reduz o padding para melhor ajuste em telas pequenas */
+    display: flex;
+    flex-direction: column; /* Muda para coluna para melhor responsividade */
+    align-items: center; /* Centraliza os itens */
+    gap: 20px;
+    width: 100%; /* Garante que ocupe 100% da largura */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+    padding-top: 8vh;
+    margin-top: 8vh;
+}
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    justify-content: space-between; /* Espaça os grupos de formulário */
+    width: 100%; /* Ocupar 100% da largura */
+    gap: 20px; /* Espaço entre as colunas */
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px); /* Ocupar 50% da largura menos o espaço entre as colunas */
+    min-width: 150px; /* Define uma largura mínima */
+}
+.form-group label {
+    margin-bottom: 5px;
+    color: #A0A0A0;
+}
+.form-group input, .form-group select {
+    padding: 15px; /* Aumenta o padding para os inputs */
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    color: #A0A0A0;
+    width: 100%; /* Garante que os inputs ocupem 100% da largura */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+}
+.form-group select {
+    color: #FF7F00;
+}
+.form-group select option {
+    color: #000000;
+}
+.submit-button {
+    background-color: #001F4D;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%; /* Garante que o botão ocupe 100% da largura */
+    max-width: 300px; /* Limita a largura máxima */
+}
+@media (max-width: 600px) {
+    .header .logo {
+        font-size: 28px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+    .header .nav a {
+        font-size: 12px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+    .form-row {
+        flex-direction: column; /* Muda para coluna em telas menores */
+    }
+    .form-group {
+        width: 100%; /* Muda a largura dos grupos para 100% em telas menores */
+    }
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 800px) {
+    .navbar {
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--primary-color);
+        padding: 1rem;
+        z-index: 1000;
+        background-color: #001F4D;
+        color: #FFFFFF;
+    }
+    }
+
+    .menu a {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .plans {
+        flex-direction: column;
+    }
+
+    .plan {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .plan img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .plan h2 {
+        font-size: 1.5rem;
+    }
+
+    .plan .button {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        padding-top: 8vh;
+    }
+
+    header .menu-icon {
+        display: block;  
+    }
+
+    header nav {
+        display: none;  
+        flex-direction: column;
+        width: 100%;
+        background-color: #0a1f44;
+        position: absolute;
+        top: 8vh;  
+        left: 0;
+        padding: 10px;
+    }
+
+    header nav.active {
+        display: flex;  
+    }
+
+    header nav a {
+        padding: 10px;
+    }
+
+    .content {
+        margin-left: 0;  
+    }
+}
