@@ -97,7 +97,7 @@ body {
 
 
 
-.profile-profile-container {
+.profile-container {
     max-width: 1100px;
     margin: 0 auto;
     background-color: white;
@@ -142,7 +142,7 @@ body {
     position: relative;
 }
 
-.avatar-profile-container {
+.avatar-container {
     position: relative;
     margin-right: 30px;
 }
@@ -325,39 +325,56 @@ body {
 }
 
 @media (max-width: 800px) {
-    .profile-container {
-        flex-direction: column;
-        padding-top: 8vh;
+    body {
+        font-size: 14px; /* Ajusta o tamanho da fonte para melhor legibilidade */
     }
 
-    header .menu-icon {
-        display: block;  
+    .profile-container, .profile-profile-container {
+        padding-top: 8vh; /* Garante que o conteúdo não fique atrás do header fixo */
     }
 
     header nav {
-        display: none;  
         flex-direction: column;
         width: 100%;
-        background-color: #0a1f44;
         position: absolute;
         top: 8vh;  
         left: 0;
         padding: 10px;
+        display: none; /* Esconde o menu inicialmente */
     }
 
     header nav.active {
-        display: flex;  
+        display: flex; /* Exibe o menu quando ativo */
     }
 
-    header nav a {
-        padding: 10px;
+    header .menu-icon {
+        display: block; /* Mostra o ícone do menu em telas pequenas */
     }
 
-    .content {
-        margin-left: 0;  
+    .content-grid {
+        flex-direction: column; /* Muda a direção do grid para coluna em telas pequenas */
     }
 
-    .edit-profile-btn{
-        width: 2%;
+    .left-column {
+        margin-right: 0; /* Remove a margem */
+        margin-bottom: 20px; /* Adiciona espaço entre as colunas */
+    }
+
+    .right-column {
+        flex: 1; /* Permite que a coluna da direita ocupe a largura total */
+    }
+
+    .media-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Ajusta a galeria para 2 colunas */
+    }
+
+    .media-item img,
+    .media-item video {
+        height: auto; /* Permite que a altura se ajuste automaticamente */
+    }
+
+    .edit-profile-btn {
+        width: 100%; /* Botão ocupa a largura total */
+        margin-top: 10px; /* Espaço acima do botão */
     }
 }
