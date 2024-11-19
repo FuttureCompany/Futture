@@ -2,7 +2,7 @@
 <head>
     <title>Futture</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/jogadores.css">
+    <link rel="stylesheet" href="/css/seletivas.css">
 </head>
 <body>
     <header>
@@ -11,7 +11,7 @@
         <nav class="menu" id="menu">
             <a href="/index.html">Home</a>
             <a href="/html/jogadores.html">Jogadores</a>
-            <a href="/html/seletivas.html">Seletivas</a>
+            <a href="/index.html#servicos">Seletivas</a>
             <a href="/html/perfil.html">Perfil</a>
         </nav>
     </header>
@@ -67,8 +67,8 @@
             <select name="idadeMax" id="idadeMax" disabled>
                 <option value="" disabled selected>Selecione a idade máxima</option>
             </select>
-        </section>
-        <section class="content">
+            </section>
+            <section class="content">
             <section class="search-bar">
                 <input type="text" placeholder="PESQUISAR NOME" />
                 <button><i class="fas fa-search"></i></button>
@@ -80,54 +80,54 @@
                 <select><option>ORDENAR POR:</option></select>
             </section>
             <section class="player-grid">
-                <a href="/html/perfil.html"><section class="player-card">
-                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 1" />
-                    <p>JOGADOR 1</p>
+                <a href="/html/empre.html"><section class="player-card">
+                    <img src="/imagens/stadium-svgrepo-com.svg" alt="Placeholder image of player 1" />
+                    <p>SELETIVA 1</p>
                 </section></a>
-                <a href="/html/perfil.html"><section class="player-card">
-                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 2" />
-                    <p>JOGADOR 2</p>
+                <a href="/html/empre.html"><section class="player-card">
+                    <img src="/imagens/stadium-svgrepo-com.svg" alt="Placeholder image of player 2" />
+                    <p>SELETIVA 2</p>
                 </section></a>
-                <a href="/html/perfil.html"><section class="player-card">
-                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 3" />
-                    <p>JOGADOR 3</p>
+                <a href="/html/empre.html"><section class="player-card">
+                    <img src="/imagens/stadium-svgrepo-com.svg" alt="Placeholder image of player 3" />
+                    <p>SELETIVA 3</p>
                 </section></a>
-                <a href="/html/perfil.html"><section class="player-card">
-                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 4" />
-                    <p>JOGADOR 4</p>
+                <a href="/html/empre.html"><section class="player-card">
+                    <img src="/imagens/stadium-svgrepo-com.svg" alt="Placeholder image of player 4" />
+                    <p>SELETIVA 4</p>
                 </section></a>
-                <a href="/html/perfil.html"><section class="player-card">
-                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 5" />
-                    <p>JOGADOR 5</p>
+                <a href="/html/empre.html"><section class="player-card">
+                    <img src="/imagens/stadium-svgrepo-com.svg" alt="Placeholder image of player 5" />
+                    <p>SELETIVA 5</p>
                 </section></a>
-                <a href="/html/perfil.html"><section class="player-card">
-                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 5" />
-                    <p>JOGADOR 6</p>
+                <a href="/html/empre.html"><section class="player-card">
+                    <img src="/imagens/stadium-svgrepo-com.svg" alt="Placeholder image of player 5" />
+                    <p>SELETIVA 6</p>
                 </section></a>
-                <a href="/html/perfil.html"><section class="player-card">
-                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 5" />
-                    <p>JOGADOR 7</p>
+                <a href="/html/empre.html"><section class="player-card">
+                    <img src="/imagens/stadium-svgrepo-com.svg" alt="Placeholder image of player 5" />
+                    <p>SELETIVA 7</p>
                 </section></a>
-                <a href="/html/perfil.html"><section class="player-card">
-                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 5" />
-                    <p>JOGADOR 8</p>
+                <a href="/html/empre.html"><section class="player-card">
+                    <img src="/imagens/stadium-svgrepo-com.svg" alt="Placeholder image of player 5" />
+                    <p>SELETIVA 8</p>
                 </section></a>
-                <a href="/html/perfil.html"><section class="player-card">
-                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 5" />
-                    <p>JOGADOR 9</p>
+                <a href="/html/empre.html"><section class="player-card">
+                    <img src="/imagens/stadium-svgrepo-com.svg" alt="Placeholder image of player 5" />
+                    <p>SELETIVA 9</p>
                 </section></a>
             </section>
         </section>
     </main> 
     <script type="text/javascript" src="/javascript/hamburguer.js"></script>
     <script>
-        // Referências para os campos
+        
         const selectMin = document.getElementById("idadeMin");
         const selectMax = document.getElementById("idadeMax");
       
-        // Função para preencher um <select> com opções de 0 a 99
+        
         function preencherSelect(select, start, end) {
-          select.innerHTML = '<option value="" disabled selected>Selecione</option>'; // Limpa e adiciona o placeholder
+          select.innerHTML = '<option value="" disabled selected>Selecione</option>'; 
           for (let i = start; i <= end; i++) {
             const option = document.createElement("option");
             option.value = i;
@@ -144,6 +144,7 @@
           selectMax.disabled = false; 
         });
       
+        
         selectMax.addEventListener("change", () => {
           const idadeMin = selectMin.value;
           const idadeMax = selectMax.value;

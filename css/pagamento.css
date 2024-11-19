@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +28,10 @@ header h1 {
 }
 
 header h1 a {
-  color: inherit;
+  list-style: none;
   text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 header nav {
@@ -40,10 +44,34 @@ header nav a {
   color: white;
   margin-left: 10px;
   text-decoration: none;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  position: relative; 
 }
 
 header nav a.active {
   color: #ff7f00;
+}
+
+header nav a:hover {
+  color: #ff8000;
+  font-size: 1.2rem;
+  transform: scale(1.1);
+}
+
+
+header nav a::after {
+  content: ''; 
+  position: absolute;
+  left: 0;
+  bottom: -5px; 
+  width: 0%; 
+  height: 2px;
+  background-color: #f39c12;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%; 
 }
 
 header .menu-icon {
@@ -54,45 +82,48 @@ header .menu-icon {
 
 body {
   display: flex;
-  flex-direction: column; /* Alinha os elementos em coluna */
-  min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
-  margin: 0; /* Remove margens padrão */
+  flex-direction: column; 
+  min-height: 100vh; 
+  margin: 0; 
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
-  flex: 1; /* Faz o main ocupar o espaço restante */
+  flex: 1; 
   display: flex;
-  flex-direction: column; /* Alinha as seções em coluna */
-  padding: 2rem; /* Adiciona padding responsivo */
+  flex-direction: column; 
+  padding: 2rem; 
 }
 
 .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem; /* Espaçamento entre os itens */
-  max-width: 1200px; /* Largura máxima */
-  width: 100%; /* Ocupa toda a largura disponível */
-  margin: 2rem auto; /* Margem superior e inferior */
-  padding: 2rem; /* Padding interno */
-  min-height: 40vh; /* Altura mínima responsiva */
+  gap: 2rem; 
+  max-width: 1200px; 
+  width: 100%; 
+  margin: 2rem auto; 
+  padding: 2rem; 
+  min-height: 40vh; 
+  margin-top: 5%;
 }
 
 .card, .summary {
-  flex: 1 1 calc(33.333% - 2rem); /* Cada card ocupa um terço menos o espaçamento */
+  flex: 1 1 calc(33.333% - 2rem); 
   border: 1px solid #ddd;
-  border-radius: 0.5rem; /* Bordas arredondadas */
-  padding: 1rem; /* Padding interno */
+  border-radius: 0.5rem; 
+  padding: 1rem; 
   background-color: #f9f9f9;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .form-section {
-  flex: 1 1 100%; /* Mantém a seção de formulário ocupando toda a largura */
-  margin-top: auto; /* Empurra a seção para o fundo do main */
-  padding: 2rem; /* Adiciona padding */
-  background-color: #f9f9f9; /* Fundo para destaque */
-  border-top: 1px solid #ddd; /* Linha superior para separar do conteúdo */
+  flex: 1 1 100%; 
+  margin-top: auto; 
+  padding: 2rem; 
+  background-color: #0a1f44; 
+  border-top: 1px solid #ddd; 
+  color: #f4f4f4;
 }
  
   .card-header {
@@ -131,22 +162,23 @@ main {
   }
   
   input[type="submit"] {
-    background-color: #333;
+    background-color: #ff8000;
     color: #fff;
     padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    width: 20%;
   }
   
   input[type="submit"]:hover {
     background-color: #555;
   }
+
   
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .navbar {
+  @media (max-width: 800px) {
+    .content {
       flex-direction: column;
       align-items: flex-start;
     } 
@@ -158,14 +190,15 @@ main {
       flex-direction: column;
     }
    
-  .content {
+  .card {
+    display: flex;
     flex-direction: column; 
     align-items: center; 
+    width: 70vw;
+    height: auto;
+    padding-top: 2vh;
   }
 
-  .card, .summary {
-    flex: 1 1 100%; 
-  }
 
   .form-section {
     width: 100%; /
@@ -193,6 +226,12 @@ main {
 
     header nav a {
         padding: 10px;
-    }}
+    }
+    
+    input[type="submit"]{
+      width: 22vw;
+      text-align: center;
+    }
+  }
 
     

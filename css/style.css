@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Rolagem suave */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Estilos do Header */
+
 header {
   background-color: #0a1f44;
   color: #ff7f00;
@@ -36,7 +38,7 @@ header h1 a {
   list-style: none;
   text-decoration: none;
   color: inherit;
-  
+  transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 header nav {
@@ -49,10 +51,34 @@ header nav a {
   color: white;
   margin-left: 10px;
   text-decoration: none;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  position: relative; /* Necessário para o underline animado */
 }
 
 header nav a.active {
   color: #ff7f00;
+}
+
+header nav a:hover {
+  color: #ff8000;
+  font-size: 1.2rem;
+  transform: scale(1.1);
+}
+
+/* Underline animado */
+header nav a::after {
+  content: ''; 
+  position: absolute;
+  left: 0;
+  bottom: -5px; 
+  width: 0%; /* Começa com 0% de largura */
+  height: 2px;
+  background-color: #f39c12;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%; /* Expande a linha ao passar o mouse */
 }
 
 header .menu-icon {
@@ -60,6 +86,7 @@ header .menu-icon {
   font-size: 30px;
   cursor: pointer;
 }
+
 /* Estilos do Carrossel */
 .carousel {
   width: 100%;
@@ -118,33 +145,33 @@ header .menu-icon {
 }
 
 .btn {
-  width: 150px; /* Largura fixa para os botões */
-  height: 50px; /* Altura fixa para os botões */
-  border: solid; /* Sem borda */
-  border-radius: 0; /* Bordas quadradas */
-  cursor: pointer; /* Cursor em forma de mão */
-  font-weight: bold; /* Negrito */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+  width: 150px; 
+  height: 50px; 
+  border: solid; 
+  border-radius: 0; 
+  cursor: pointer; 
+  font-weight: bold; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .btn-primary {
-  background-color: #FF8000; /* Cor azul para o botão primário */
-  color: white; /* Cor do texto */
+  background-color: #FF8000; 
+  color: white; 
   border: 2px solid #001C41;
 }
 
 .btn-secondary {
-  background-color: transparent; /* Fundo transparente */
-  color: white; /* Cor do texto */
-  border: 2px solid white; /* Borda branca */
+  background-color: transparent; 
+  color: white; 
+  border: 2px solid white;
 }
 
 .btn-primary:hover {
-  background-color: #001C41; /* Cor mais escura ao passar o mouse para o botão primário */
+  background-color: #001C41; 
 }
 
 .btn-secondary:hover {
-  background-color: #001C41; /* Fundo levemente escuro ao passar o mouse para o botão secundário */
+  background-color: #001C41; 
 }
 
 .carousel-nav {
@@ -157,22 +184,22 @@ header .menu-icon {
 }
 
 .prev-btn, .next-btn {
-  color: white; /* Cor do texto */
-  border: none; /* Sem borda */
-  width: 40px; /* Largura fixa para quadrado */
-  height: 40px; /* Altura fixa para quadrado */
-  font-size: 1.5rem; /* Tamanho da fonte */
-  cursor: pointer; /* Cursor em forma de mão */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
-  border-radius: 0; /* Bordas quadradas */
+  color: white; 
+  border: none; 
+  width: 40px; 
+  height: 40px; 
+  font-size: 1.5rem; 
+  cursor: pointer; 
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+  border-radius: 0;
 }
 
 .prev-btn:hover, .next-btn:hover {
-  background-color: #FF8000; /* Cor de fundo ao passar o mouse */
-  transform: scale(1.1); /* Aumenta o tamanho do botão */
+  background-color: #FF8000; 
+  transform: scale(1.1); 
 }
 
-/* Seção Sobre Nós */
+
 .about-us {
   width: 100%;
   padding: 80px 0;
@@ -208,12 +235,12 @@ header .menu-icon {
 .mission-values {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente */
+  flex-wrap: wrap; 
 }
 
 .mission-item {
   flex: 1;
-  min-width: 250px; /* Define uma largura mínima para garantir que os itens não fiquem muito pequenos */
+  min-width: 250px; 
   background-color: #fff;
   padding: 25px;
   border-radius: 10px;
@@ -241,10 +268,10 @@ header .menu-icon {
   max-width: 500px;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  height: 720px; /* Ajusta a altura automaticamente */
+  height: 720px; 
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
 
   .container {
@@ -279,7 +306,7 @@ header nav a {
     margin-left: 0;  
 }
 
-*/
+
   .about-us .content {
     flex-direction: column;
     text-align: center;

@@ -9,7 +9,7 @@ function passwordConfirmation(event) {
 
     if (valuePassword === valueConfirmPassword) {
         
-        window.location.href = "/Futture/html/escolha.html";
+        window.location.href = "/html/escolha.html";
         return false; 
     } else {
         document.getElementById("mensagem").innerHTML = "O campo de confirmar a senha está errado!";

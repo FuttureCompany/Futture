@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #FFFFFF;
-    padding: 0 10px; /* Adiciona um pouco de padding */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    padding: 0 10px; 
 }
 * {
     margin: 0;
@@ -11,12 +12,7 @@ body {
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-header {
+hheader {
     background-color: #0a1f44;
     color: #ff7f00;
     padding: 10px 20px;
@@ -26,79 +22,106 @@ header {
     flex-wrap: wrap;
     height: 8vh;
     position: fixed;  
-    top: 0;   
+    top: 0;  
     left: 0;
     right: 0;
     z-index: 1000;  
-}
-
-header h1 {
+  }
+  
+  header h1 {
     margin: 0;
     flex: 1;
-}
-
-header h1 a {
-    color: inherit;
+  }
+  
+  header h1 a {
+    list-style: none;
     text-decoration: none;
-}
-header nav {
+    color: inherit;
+    transition: color 0.3s ease, font-size 0.3s ease;
+  }
+  
+  header nav {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-header nav a {
+  }
+  
+  header nav a {
     color: white;
     margin-left: 10px;
     text-decoration: none;
-}
-
-header nav a.active {
+    transition: color 0.3s ease, font-size 0.3s ease;
+    position: relative; 
+  }
+  
+  header nav a.active {
     color: #ff7f00;
-}
-
-header .menu-icon {
+  }
+  
+  header nav a:hover {
+    color: #ff8000;
+    font-size: 1.2rem;
+    transform: scale(1.1);
+  }
+  
+ 
+  header nav a::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0%; 
+    height: 2px;
+    background-color: #f39c12;
+    transition: width 0.3s ease;
+  }
+  
+  header nav a:hover::after {
+    width: 100%; 
+  }
+  
+  header .menu-icon {
     display: none;  
     font-size: 30px;
     cursor: pointer;
-}
+  }
+  
 
 .container {
-    padding: 20px; /* Reduz o padding para melhor ajuste em telas pequenas */
+    padding: 20px; 
     display: flex;
-    flex-direction: column; /* Muda para coluna para melhor responsividade */
-    align-items: center; /* Centraliza os itens */
+    flex-direction: column; 
+    align-items: center; 
     gap: 20px;
-    width: 100%; /* Garante que ocupe 100% da largura */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+    width: 100%; 
+    box-sizing: border-box; 
     padding-top: 8vh;
     margin-top: 8vh;
 }
 .form-row {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
-    justify-content: space-between; /* Espaça os grupos de formulário */
-    width: 100%; /* Ocupar 100% da largura */
-    gap: 20px; /* Espaço entre as colunas */
-}
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    width: 100%; 
+    gap: 20px; 
 .form-group {
     display: flex;
     flex-direction: column;
-    width: calc(50% - 10px); /* Ocupar 50% da largura menos o espaço entre as colunas */
-    min-width: 150px; /* Define uma largura mínima */
+    width: calc(50% - 10px); 
+    min-width: 150px; 
 }
 .form-group label {
     margin-bottom: 5px;
     color: #A0A0A0;
 }
 .form-group input, .form-group select {
-    padding: 15px; /* Aumenta o padding para os inputs */
+    padding: 15px; 
     border: 1px solid #D0D0D0;
     border-radius: 5px;
     background-color: #F0F0F0;
     color: #A0A0A0;
-    width: 100%; /* Garante que os inputs ocupem 100% da largura */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+    width: 100%; 
+    box-sizing: border-box; 
 }
 .form-group select {
     color: #FF7F00;
@@ -115,26 +138,26 @@ header .menu-icon {
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
-    width: 100%; /* Garante que o botão ocupe 100% da largura */
-    max-width: 300px; /* Limita a largura máxima */
+    width: 100%; 
+    max-width: 300px; 
 }
 @media (max-width: 600px) {
     .header .logo {
-        font-size: 28px; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 28px; 
     }
     .header .nav a {
-        font-size: 12px; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 12px; 
     }
     .form-row {
-        flex-direction: column; /* Muda para coluna em telas menores */
+        flex-direction: column; 
     }
     .form-group {
-        width: 100%; /* Muda a largura dos grupos para 100% em telas menores */
+        width: 100%; 
     }
 }
 
 
-/* Responsividade */
+
 @media screen and (max-width: 800px) {
     .navbar {
         flex-wrap: wrap;
@@ -227,4 +250,4 @@ header .menu-icon {
     .content {
         margin-left: 0;  
     }
-}
+}}

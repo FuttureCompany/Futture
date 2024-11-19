@@ -63,20 +63,20 @@ header {
     transform: scale(1.1);
   }
   
- 
+  /* Underline animado */
   header nav a::after {
     content: ''; 
     position: absolute;
     left: 0;
     bottom: -5px; 
-    width: 0%; 
+    width: 0%; /* Começa com 0% de largura */
     height: 2px;
     background-color: #f39c12;
     transition: width 0.3s ease;
   }
   
   header nav a:hover::after {
-    width: 100%; /
+    width: 100%; /* Expande a linha ao passar o mouse */
   }
   
   header .menu-icon {
@@ -85,11 +85,10 @@ header {
     cursor: pointer;
   }
   
-
 .container {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 8vh; 
+    padding-top: 8vh; /* Espaçamento para que o conteúdo não fique sobre o cabeçalho fixo */
 }
 
 .sidebar {
@@ -99,10 +98,10 @@ header {
     color: white;
     flex-shrink: 0;
     box-sizing: border-box;
-    position: fixed; 
-    height: 100vh; 
-    overflow-y: auto; 
-    z-index: 999; 
+    position: fixed; /* Adiciona a fixação */
+    height: 100vh; /* Para ocupar toda a altura da página */
+    overflow-y: auto; /* Adiciona uma barra de rolagem se necessário */
+    z-index: 999; /* Garante que a sidebar esteja abaixo do header */
 }
 
 .sidebar h3 {
@@ -170,10 +169,6 @@ header {
     gap: 20px;
 }
 
-.player-grid a{
-    text-decoration: none;
-    color: inherit;
-}
 .player-card {
     background-color: #0a1f44;
     color: white;
@@ -182,10 +177,16 @@ header {
     border-radius: 10px;
 }
 
+.player-grid a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .player-card img {
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
+    
 }
 
 .sort-bar {

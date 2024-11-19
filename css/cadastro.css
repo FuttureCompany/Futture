@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
 }
 
@@ -17,45 +18,72 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    height: 10vh;
-    position: fixed; /* Fixa o cabeçalho no topo */
-    top: 0; /* Fixa na parte superior */
+    height: 8vh;
+    position: fixed;  
+    top: 0;  
     left: 0;
     right: 0;
-    z-index: 1000; /* Garante que o header fique acima do conteúdo */
-}
-
-header h1 {
+    z-index: 1000;  
+  }
+  
+  header h1 {
     margin: 0;
     flex: 1;
-}
-
-header h1 a {
-    color: inherit;
+  }
+  
+  header h1 a {
+    list-style: none;
     text-decoration: none;
-}
-
-header nav {
+    color: inherit;
+    transition: color 0.3s ease, font-size 0.3s ease;
+  }
+  
+  header nav {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-header nav a {
+  }
+  
+  header nav a {
     color: white;
     margin-left: 10px;
     text-decoration: none;
-}
-
-header nav a.active {
+    transition: color 0.3s ease, font-size 0.3s ease;
+    position: relative; 
+  }
+  
+  header nav a.active {
     color: #ff7f00;
-}
-
-header .menu-icon {
-    display: none; /* Inicialmente escondido */
+  }
+  
+  header nav a:hover {
+    color: #ff8000;
+    font-size: 1.2rem;
+    transform: scale(1.1);
+  }
+  
+  
+  header nav a::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0%; 
+    height: 2px;
+    background-color: #f39c12;
+    transition: width 0.3s ease;
+  }
+  
+  header nav a:hover::after {
+    width: 100%; 
+  }
+  
+  header .menu-icon {
+    display: none;  
     font-size: 30px;
     cursor: pointer;
-}
+  }
+  
 
 .container {
     max-width: 500px;
