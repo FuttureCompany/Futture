@@ -320,3 +320,37 @@ header {
 .media-item:hover .media-overlay {
     opacity: 1;
 }
+
+@media (max-width: 800px) {
+    .profile-container {
+        flex-direction: column;
+        padding-top: 8vh;
+    }
+
+    header .menu-icon {
+        display: block;  
+    }
+
+    header nav {
+        display: none;  
+        flex-direction: column;
+        width: 100%;
+        background-color: #0a1f44;
+        position: absolute;
+        top: 8vh;  
+        left: 0;
+        padding: 10px;
+    }
+
+    header nav.active {
+        display: flex;  
+    }
+
+    header nav a {
+        padding: 10px;
+    }
+
+    .content {
+        margin-left: 0;  
+    }
+}
