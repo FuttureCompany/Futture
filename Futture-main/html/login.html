@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <html lang="pt-BR"></html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFUTTURE</title>
+    <base href="/Futture/">
+    <link rel="stylesheet" href="/Futture/css/login.css">  
+ 
+</head>
+<body>
+    <header>
+        <a href="#home"><img src="imagens/certo.png" alt="Futture Logo" id="logo" class="logo"></a>
+        <section class="menu-icon" id="menu-icon">&#9776;</section>
+        <nav class="menu" id="menu">
+            <a href="/index.html">Home</a>
+            <a href="/index.html#about">Sobre Nós</a>
+            <a href="/index.html#servicos">Serviços</a>
+            <a href="/index.html#contato">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <section class="login-box">
+                <input type="text" id="username" placeholder="email ou nome de usuario" required>
+                <input type="password" id="password" placeholder="senha" required minlength="8">
+                <section class="forgot">ESQUECEU?</section>
+                <button class="login-btn" onclick="validateLogin()">ENTRAR</button>
+                <section class="separator">ou</section>
+                <section class="social-login">
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
+                    <a href="#" class="google"><i class="fab fa-google"></i> GOOGLE</a>
+                </section>
+                <section class="novo">Novo aqui? <a href="/html/cadastro.html">se cadastre</a></section>
+            </section>
+        </section>
+    </main>
+    <script type="text/javascript" src="/javascript/hamburguer.js"></script>
+    <script>
+        function validateLogin() {
+        
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+
+        
+        if (username === "" || password === "") {
+            alert("Por favor, preencha todos os campos.");
+            return false;
+        }
+        if (username.length < 3) {
+            alert("O nome de usuário deve ter pelo menos 3 caracteres.");
+            return false;
+        }
+
+        if (password.length < 6) {
+            alert("A senha deve ter pelo menos 6 caracteres.");
+            return false;
+        }
+
+        window.location.href = "perfil.html"
+    }
+    </script>
+</body>
+</html>

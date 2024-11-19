@@ -1,0 +1,235 @@
+
+#logo {
+    max-height: 70px; /* Ajuste conforme a altura do header */
+    width: auto; /* Mantém a proporção */
+    padding: 10px; /* Adiciona um pouco de espaço ao redor do logo */
+    object-fit: contain; /* Garante que a imagem seja totalmente visível */
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+  background-color: #0a1f44;
+  color: #ff7f00;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 8vh;
+  position: fixed;  
+  top: 0;  
+  left: 0;
+  right: 0;
+  z-index: 1000;  
+}
+
+header h1 {
+  margin: 0;
+  flex: 1;
+}
+
+header h1 a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+header nav a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  position: relative; /* Necessário para o underline animado */
+}
+
+header nav a.active {
+  color: #ff7f00;
+}
+
+header nav a:hover {
+  color: #ff8000;
+  font-size: 1.2rem;
+  transform: scale(1.1);
+}
+
+/* Underline animado */
+header nav a::after {
+  content: ''; 
+  position: absolute;
+  left: 0;
+  bottom: -5px; 
+  width: 0%; /* Começa com 0% de largura */
+  height: 2px;
+  background-color: #f39c12;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%; /* Expande a linha ao passar o mouse */
+}
+
+header .menu-icon {
+  display: none;  
+  font-size: 30px;
+  cursor: pointer;
+}
+
+        
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8vh; /* Espaçamento para que o conteúdo não fique sobre o cabeçalho fixo */
+    margin-top: 10VH;
+}
+.login-box {
+    background-color: #8a9aa3;
+    padding: 5%;
+    margin-top: 7%;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    width: 50vh;
+    height: 50vh;
+    border: 1px solid #5a5a5a;
+           
+}
+.login-box input[type="text"], .login-box input[type="password"] {
+    width: 100%;
+    padding: 3%;
+    margin: 2% 0;
+    border: none;
+    border-radius: 30px;
+    background-color: #ffffff;
+    font-size: 1em;
+    color: #8a9aa3;
+    border: 1px solid #5a5a5a;
+}
+.login-box .forgot {
+    text-align: right;
+    font-size: 0.8em;
+    color: #5a5a5a;
+    margin-bottom: 2%;
+    
+}
+.login-box .login-btn {
+    background-color: #ff9D00;
+    color: #ffffff;
+    padding: 3%;
+    border: none;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: 1px solid #5a5a5a;
+}
+.login-box .separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 5% 0;
+}
+.login-box .separator::before, .login-box .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid #5a5a5a;
+}
+.login-box .separator::before {
+    margin-right: .25em;
+}
+.login-box .separator::after {
+    margin-left: .25em;
+}
+.login-box .social-login {
+    display: flex;
+    justify-content: space-between;
+}
+.login-box .social-login a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+    padding: 2%;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+}
+.login-box .social-login a.facebook {
+    background-color: #1877F2;
+}
+.login-box .social-login a.google {
+    background-color: #FF0000;
+}
+.login-box .social-login a i {
+    margin-right: 5px;
+}
+
+.novo{
+    font: 1em;
+    color: #f4f4f4;
+    padding-top: 5%;
+}
+
+.novo a {
+    text-decoration: none;
+    color: #165acf;
+}
+
+@media (max-width: 800px) {
+    body{
+        background-color: #8a9aa3;
+    }
+
+    .container {
+        flex-direction: column;
+        padding-top: 8vh;
+        margin-left: 0;  
+    }
+
+    header .menu-icon {
+        display: block;  
+    }
+
+    header nav {
+        display: none;  
+        flex-direction: column;
+        width: 100%;
+        background-color: #0a1f44;
+        position: absolute;
+        top: 8vh;  
+        left: 0;
+        padding: 10px;
+    }
+
+    header nav.active {
+        display: flex;  
+    }
+
+    header nav a {
+        padding: 10px;
+    }
+
+    .login-box{
+        border: none;
+    }
+}

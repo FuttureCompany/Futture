@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <html lang="pt-BR"></html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTTURE</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/jogadores.css">
+</head>
+<body>
+    <header>
+        <a href="#home"><img src="imagens/certo.png" alt="Futture Logo" id="logo" class="logo"></a>
+        <section class="menu-icon" id="menu-icon">&#9776;</section>
+        <nav class="menu" id="menu">
+            <a href="/index.html">Home</a>
+            <a href="/html/jogadores.html">Jogadores</a>
+            <a href="/html/seletivas.html">Seletivas</a>
+            <a href="/html/perfil.html">Perfil</a>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="sidebar">
+            <h3>SEXO :</h3>
+            <label><input type="checkbox" checked /> MASCULINO</label>
+            <label><input type="checkbox" /> FEMININO</label>
+            <h3>POSIÇÃO :</h3>
+            <label><input type="checkbox" /> GOLEIRO</label>
+            <label><input type="checkbox" /> ZAGUEIRO</label>
+            <label><input type="checkbox" /> LATERAL</label>
+            <label><input type="checkbox" /> VOLANTE</label>
+            <label><input type="checkbox" /> MEIO CAMPO</label>
+            <label><input type="checkbox" /> ATACANTE</label>
+            <h3>ESTADO:</h3>
+            <select>
+                <option>ESTADO</option>
+                <option>Acre</option>
+                <option>Alagoas</option>
+                <option>Amazonas</option>
+                <option>Bahia</option>
+                <option>Ceará</option>
+                <option>Espírito Santo</option>
+                <option>Goiás</option>
+                <option>Maranhão</option>
+                <option>Mato Grosso</option>
+                <option>Mato Grosso do Sul</option>
+                <option>Minas Gerais</option>
+                <option>Pará</option>
+                <option>Paraíba</option>
+                <option>Paraná</option>
+                <option>Pernambuco</option>
+                <option>Piauí</option>
+                <option>Rio de Janeiro</option>
+                <option>Rio Grande do Norte</option>
+                <option>Rio Grande do Sul</option>
+                <option>Rondônia</option>
+                <option>Roraima</option>
+                <option>Santa Catarina</option>
+                <option>São Paulo</option>
+                <option>Sergipe</option>
+                <option>Tocantins</option>
+                <option>Distrito Federal</option>
+            </select>
+            <h3>IDADE :</h3>
+            <label for="idadeMin">Mínima:</label>
+            <select name="idadeMin" id="idadeMin">
+                <option value="" disabled selected>Selecione a idade mínima</option>
+            </select>
+
+            <label for="idadeMax">Máxima:</label>
+            <select name="idadeMax" id="idadeMax" disabled>
+                <option value="" disabled selected>Selecione a idade máxima</option>
+            </select>
+        </section>
+        <section class="content">
+            <section class="search-bar">
+                <input type="text" placeholder="PESQUISAR NOME" />
+                <button><i class="fas fa-search"></i></button>
+            </section>
+            <section class="options">
+                <h2>OPÇÕES :</h2>
+            </section>
+            <section class="sort-bar">
+                <select><option>ORDENAR POR:</option></select>
+            </section>
+            <section class="player-grid">
+                <a href="/html/perfil.html"><section class="player-card">
+                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 1" />
+                    <p>JOGADOR 1</p>
+                </section></a>
+                <a href="/html/perfil.html"><section class="player-card">
+                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 2" />
+                    <p>JOGADOR 2</p>
+                </section></a>
+                <a href="/html/perfil.html"><section class="player-card">
+                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 3" />
+                    <p>JOGADOR 3</p>
+                </section></a>
+                <a href="/html/perfil.html"><section class="player-card">
+                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 4" />
+                    <p>JOGADOR 4</p>
+                </section></a>
+                <a href="/html/perfil.html"><section class="player-card">
+                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 5" />
+                    <p>JOGADOR 5</p>
+                </section></a>
+                <a href="/html/perfil.html"><section class="player-card">
+                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 5" />
+                    <p>JOGADOR 6</p>
+                </section></a>
+                <a href="/html/perfil.html"><section class="player-card">
+                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 5" />
+                    <p>JOGADOR 7</p>
+                </section></a>
+                <a href="/html/perfil.html"><section class="player-card">
+                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 5" />
+                    <p>JOGADOR 8</p>
+                </section></a>
+                <a href="/html/perfil.html"><section class="player-card">
+                    <img src="/imagens/football-player-setting-ball-svgrepo-com.svg" alt="Placeholder image of player 5" />
+                    <p>JOGADOR 9</p>
+                </section></a>
+            </section>
+        </section>
+    </main> 
+    <script type="text/javascript" src="/javascript/hamburguer.js"></script>
+    <script>
+        // Referências para os campos
+        const selectMin = document.getElementById("idadeMin");
+        const selectMax = document.getElementById("idadeMax");
+      
+        // Função para preencher um <select> com opções de 0 a 99
+        function preencherSelect(select, start, end) {
+          select.innerHTML = '<option value="" disabled selected>Selecione</option>'; // Limpa e adiciona o placeholder
+          for (let i = start; i <= end; i++) {
+            const option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            select.appendChild(option);
+          }
+        }
+      
+        preencherSelect(selectMin, 0, 99);
+      
+        selectMin.addEventListener("change", () => {
+          const idadeMin = parseInt(selectMin.value);
+          preencherSelect(selectMax, idadeMin, 99); 
+          selectMax.disabled = false; 
+        });
+      
+        selectMax.addEventListener("change", () => {
+          const idadeMin = selectMin.value;
+          const idadeMax = selectMax.value;
+          console.log(`Idade mínima: ${idadeMin}, Idade máxima: ${idadeMax}`);
+        });
+      </script>
+</body>
+</html>
+           

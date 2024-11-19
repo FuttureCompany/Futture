@@ -1,0 +1,384 @@
+#logo {
+    max-height: 70px; /* Ajuste conforme a altura do header */
+    width: auto; /* Mantém a proporção */
+    padding: 10px; /* Adiciona um pouco de espaço ao redor do logo */
+    object-fit: contain; /* Garante que a imagem seja totalmente visível */
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0a1f44;
+    color: #ff7f00;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 8vh;
+    position: fixed;  
+    top: 0;  
+    left: 0;
+    right: 0;
+    z-index: 1000;  
+  }
+  
+  header h1 {
+    margin: 0;
+    flex: 1;
+  }
+  
+  header h1 a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, font-size 0.3s ease;
+  }
+  
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  header nav a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    position: relative; 
+  }
+  
+  header nav a.active {
+    color: #ff7f00;
+  }
+  
+  header nav a:hover {
+    color: #ff8000;
+    font-size: 1.2rem;
+    transform: scale(1.1);
+  }
+  
+  
+  header nav a::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0%; 
+    height: 2px;
+    background-color: #f39c12;
+    transition: width 0.3s ease;
+  }
+  
+  header nav a:hover::after {
+    width: 100%; 
+  }
+  
+  header .menu-icon {
+    display: none;  
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+
+.profile-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.cover-photo {
+    height: 350px;
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.edit-cover-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+}
+
+.avatar-container {
+    position: relative;
+    margin-right: 30px;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-avatar-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-avatar-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.player-details {
+    flex-grow: 1;
+}
+
+.player-details h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.player-meta {
+    font-size: 16px;
+    color: #666;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin-right: 15px;
+    color: var(--primary-color);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+}
+
+.edit-profile-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.profile-content {
+    padding: 20px 40px;
+}
+
+.content-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.right-column {
+    flex: 1;
+}
+
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.profile-section h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.stat-value {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.media-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.media-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.media-item img,
+.media-item video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.media-item:hover .media-overlay {
+    opacity: 1;
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 14px; /* Ajusta o tamanho da fonte para melhor legibilidade */
+    }
+
+    .profile-container, .profile-profile-container {
+        padding-top: 8vh; /* Garante que o conteúdo não fique atrás do header fixo */
+    }
+
+    header nav {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 8vh;  
+        left: 0;
+        padding: 10px;
+        display: none; /* Esconde o menu inicialmente */
+    }
+
+    header nav.active {
+        display: flex; /* Exibe o menu quando ativo */
+    }
+
+    header .menu-icon {
+        display: block; /* Mostra o ícone do menu em telas pequenas */
+    }
+
+    .content-grid {
+        flex-direction: column; /* Muda a direção do grid para coluna em telas pequenas */
+    }
+
+    .left-column {
+        margin-right: 0; /* Remove a margem */
+        margin-bottom: 20px; /* Adiciona espaço entre as colunas */
+    }
+
+    .right-column {
+        flex: 1; /* Permite que a coluna da direita ocupe a largura total */
+    }
+
+    .media-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Ajusta a galeria para 2 colunas */
+    }
+
+    .media-item img,
+    .media-item video {
+        height: auto; /* Permite que a altura se ajuste automaticamente */
+    }
+
+    .edit-profile-btn {
+        width: 100%; /* Botão ocupa a largura total */
+        margin-top: 10px; /* Espaço acima do botão */
+    }
+}

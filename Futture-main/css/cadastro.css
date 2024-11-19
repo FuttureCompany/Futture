@@ -1,0 +1,208 @@
+#logo {
+    max-height: 70px; /* Ajuste conforme a altura do header */
+    width: auto; /* Mantém a proporção */
+    padding: 10px; /* Adiciona um pouco de espaço ao redor do logo */
+    object-fit: contain; /* Garante que a imagem seja totalmente visível */
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0a1f44;
+    color: #ff7f00;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 8vh;
+    position: fixed;  
+    top: 0;  
+    left: 0;
+    right: 0;
+    z-index: 1000;  
+  }
+  
+  header h1 {
+    margin: 0;
+    flex: 1;
+  }
+  
+  header h1 a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, font-size 0.3s ease;
+  }
+  
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  header nav a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    position: relative; 
+  }
+  
+  header nav a.active {
+    color: #ff7f00;
+  }
+  
+  header nav a:hover {
+    color: #ff8000;
+    font-size: 1.2rem;
+    transform: scale(1.1);
+  }
+  
+  
+  header nav a::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0%; 
+    height: 2px;
+    background-color: #f39c12;
+    transition: width 0.3s ease;
+  }
+  
+  header nav a:hover::after {
+    width: 100%; 
+  }
+  
+  header .menu-icon {
+    display: none;  
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+
+.container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    padding-top: 15vh; /* Espaçamento para que o conteúdo não fique sobre o cabeçalho fixo */
+
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #222121;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group label {
+    font-size: 0.875rem;
+    color: #001f3f;
+}
+
+.checkbox-group label a {
+    color: #001f3f;
+    text-decoration: underline;
+}
+
+.submit-btn {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 320px;
+    align-self: center;
+}
+
+@media screen and (max-width: 800px) {
+    
+    header .menu-icon {
+        display: block; 
+    }
+
+    header nav {
+        display: none;  
+        flex-direction: column;
+        width: 100%;
+        background-color: #0a1f44;
+        position: absolute;
+        top: 7vh;  
+        left: 0;
+        padding: 10px;
+    }
+
+    header nav.active {
+        display: flex;   
+    }
+
+    header nav a {
+        padding: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        margin-left: 0;  
+        padding-top: 10vh;
+    }
+
+    .menu {
+        display: none;
+    }
+    
+    .menu-mobile {
+        display: flex;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+}

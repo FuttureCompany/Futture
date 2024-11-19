@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTTURE</title>
+    <link rel="stylesheet" href="/css/cadastro.css">    
+</head>
+<body>
+    <header>
+        <a href="#home"><img src="certo.png" alt="Futture Logo" id="logo" class="logo"></a>
+        <section class="menu-icon" id="menu-icon">&#9776;</section>
+        <nav class="menu" id="menu">
+            <a href="/index.html">Home</a>
+            <a href="/index.html#about">Sobre Nós</a>
+            <a href="/index.html#servicos">Serviços</a>
+            <a href="/index.html#contato">Contato</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="container">
+            <form class="cadastro-form" action="" method="POST" onsubmit="return passwordConfirmation(event)">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" minlength="8" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar a senha:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" minlength="8"  required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Li e concordo com os <a href="#">Termos de Uso e a Política de Privacidade</a></label>
+                </div>
+                <button type="submit" class="submit-btn" href >CONFIRMAR</button>
+            </form>
+            <p id="mensagem"></p>
+        </section>
+    </main>
+    <script type="text/javascript" src="/javascript/hamburguer.js"></script>
+    <script>
+        function passwordConfirmation(event) {
+    event.preventDefault();
+
+    let campoPassword = document.getElementById("password");
+    let valuePassword = campoPassword.value;
+
+    let campoConfirm = document.getElementById("confirm-password");
+    let valueConfirmPassword = campoConfirm.value;
+
+    if (valuePassword === valueConfirmPassword) {
+        
+        window.location.href = "/html/escolha.html";
+        return false; 
+    } else {
+        document.getElementById("mensagem").innerHTML = "O campo de confirmar a senha está errado!";
+        window.alert("O campo de confirmar a senha está errado!");
+        return false;
+    }}
+    </script>
+</body>
+</html>

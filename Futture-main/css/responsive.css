@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+@media screen and (max-width: 768px) {
+    /* Navegação */
+    .nav-container {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+        background-color: #001C41;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        padding: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Carrossel */
+    .carousel-content h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-content p {
+        font-size: 1rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    #home{
+        height: 80vh;
+    }
+    .carousel-slide{
+        height: 80vh;
+    }
+
+    .carousel-slide img{
+        height: 80vh;
+    }
+    /* Sobre Nós */
+    .about-us .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-us-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .mission-values {
+        flex-direction: column;
+    }
+
+    /* Planos */
+    .plans {
+        flex-direction: column;
+    }
+
+    .plan {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .features .feature {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.75em;
+        flex-wrap: wrap;
+    }
+
+    .footer-right {
+        float: none;
+        margin-top: 10px;
+        text-align: justify;
+        gap: 1em;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-icons i, .contact-icons span {
+        margin: 10px 0;
+    }
+}

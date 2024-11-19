@@ -1,0 +1,259 @@
+#logo {
+    max-height: 70px; /* Ajuste conforme a altura do header */
+    width: auto; /* Mantém a proporção */
+    padding: 10px; /* Adiciona um pouco de espaço ao redor do logo */
+    object-fit: contain; /* Garante que a imagem seja totalmente visível */
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #001c41;
+    --secondary-color: #ff9D00;
+    --white: #ffffff;
+    --gray: #D9D9D9;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+header {
+    background-color: #0a1f44;
+    color: #ff7f00;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 8vh;
+    position: fixed;  
+    top: 0;  
+    left: 0;
+    right: 0;
+    z-index: 1000;  
+  }
+  
+  header h1 {
+    margin: 0;
+    flex: 1;
+  }
+  
+  header h1 a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, font-size 0.3s ease;
+  }
+  
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  header nav a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, font-size 0.3s ease;
+    position: relative; 
+  }
+  
+  header nav a.active {
+    color: #ff7f00;
+  }
+  
+  header nav a:hover {
+    color: #ff8000;
+    font-size: 1.2rem;
+    transform: scale(1.1);
+  }
+  
+ 
+  header nav a::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0%; 
+    height: 2px;
+    background-color: #f39c12;
+    transition: width 0.3s ease;
+  }
+  
+  header nav a:hover::after {
+    width: 100%; 
+  }
+  
+  header .menu-icon {
+    display: none;  
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+
+
+.container {
+    width: 100%;
+    min-height: calc(100vh - 159px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    padding-top: 8vh ;
+    margin-top: 8vh;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.plan {
+    background-color: var(--gray);
+    border-radius: 82px;
+    width: 100%;
+    max-width: 70vh;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.plan img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.plan h2 {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.plan .button {
+    background-color: #000;
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+    max-width: 60%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.plan .button:hover {
+    background-color: #333;
+}
+
+/* Responsividade */
+@media screen and (max-width: 800px) {
+
+    body{
+        background-color: var(--gray)
+    }
+    
+    .container {
+        flex-direction: column;
+        padding-top: 8vh;
+        margin-left: 0;
+        margin-top: 2vh;
+        
+    }
+
+    header .menu-icon {
+        display: block;  
+    }
+
+    header nav {
+        display: none;  
+        flex-direction: column;
+        width: 100%;
+        background-color: #0a1f44;
+        position: absolute;
+        top: 8vh;  
+        left: 0;
+        padding: 10px;
+    }
+
+    header nav.active {
+        display: flex;  
+    }
+
+    header nav a {
+        padding: 10px;
+    }
+
+    .plans {
+        flex-direction: column;
+    }
+
+    .plan {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+body{
+    background-color: var(--gray)
+}
+
+.container{
+    padding-top: 10vh;
+    
+}
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .plan img {
+        width: 60vw;
+        height: auto;
+    }
+
+    .plan h2 {
+        font-size: 1.5rem;
+    }
+
+    .plan .button {
+        font-size: 1.2rem;
+        width: 70vw;
+    }
+
+    .plan img {
+        width: 80%;
+        height: auto;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <html lang="pt-BR"></html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTTURE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/dados-empresa.css">
+</head>
+<body>
+    <header>
+        <a href="#home"><img src="certo.png" alt="Futture Logo" id="logo" class="logo"></a>
+        <section class="menu-icon" id="menu-icon">&#9776;</section>
+        <nav class="menu" id="menu">
+            <a href="#">JOGADORES</a>
+            <a href="#">SELETIVAS</a>
+            <a class="active" href="#">CADASTRE-SE</a>
+            <a href="#">ENTRAR</a>
+        </nav>
+    </header>
+    <main class="container">
+        <form>
+            <section class="form-row">
+                <section class="form-group">
+                    <label for="company-name">Razão Social</label>
+                    <input type="text" id="company-name" name="company-name" required>
+                </section>
+                <section class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </section>
+                <section class="form-group">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj" name="cnpj" required>
+                </section>
+                <section class="form-group">
+                    <label for="birthdate">Data de Fundação</label>
+                    <input type="date" id="foundation-date" name="foundation-date" required>
+                </section>
+                <section class="form-group">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" required>
+                </section>
+                <section class="form-group">
+                    <label for="state">Estado</label>
+                    <input type="text" id="state" name="state" required>
+                </section>
+            </section>
+            <section class="form-row">
+                <section class="form-group">
+                    <label for="address">Endereço</label>
+                    <input type="text" id="address" name="address" required>
+                </section>
+                <section class="form-group">
+                    <label for="complement">Complemento</label>
+                    <input type="text" id="complement" name="complement">
+                </section>
+                <section class="form-group">
+                    <label for="city">Cidade</label>
+                    <input type="text" id="city" name="city" required>
+                </section>
+                <section class="form-group">
+                    <label for="neighborhood">Bairro</label>
+                    <input type="text" id="neighborhood" name="neighborhood" required>
+                </section>
+                <section class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </section>
+                <section class="form-group">
+                    <label for="contact-person">Nome do Contato</label>
+                    <input type="text" id="contact-person" name="contact-person" required>
+                </section>
+            </section>
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+    </main>
+<script type="text/javascript" src="/javascript/hamburguer.js"></script>
+<script type="text/javascript">
+    document.querySelector('form').addEventListener('submit', function(event) {
+        
+        event.preventDefault();
+
+       
+        const companyName = document.getElementById('company-name').value;
+        const email = document.getElementById('email').value;
+        const cnpj = document.getElementById('cnpj').value;
+        const foundationDate = document.getElementById('foundation-date').value;
+        const cep = document.getElementById('cep').value;
+        const state = document.getElementById('state').value;
+        const address = document.getElementById('address').value;
+        const city = document.getElementById('city').value;
+        const neighborhood = document.getElementById('neighborhood').value;
+        const phone = document.getElementById('phone').value;
+        const contactPerson = document.getElementById('contact-person').value;
+
+        
+        if (companyName && email && cnpj && foundationDate && cep && state && address && city && neighborhood && phone && contactPerson) {
+          
+            window.location.href = 'pagamento.html';
+        } else {
+         
+            alert('Por favor, preencha todos os campos obrigatórios.');
+        }
+    });
+</script>
+</body>
+</html>
