@@ -12,7 +12,7 @@ body {
     box-sizing: border-box;
 }
 
-hheader {
+header {
     background-color: #0a1f44;
     color: #ff7f00;
     padding: 10px 20px;
@@ -103,7 +103,8 @@ hheader {
     flex-wrap: wrap; 
     justify-content: space-between; 
     width: 100%; 
-    gap: 20px; 
+    gap: 20px; }
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -250,4 +251,4 @@ hheader {
     .content {
         margin-left: 0;  
     }
-}}
+}

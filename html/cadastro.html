@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FUTTURE</title>
-    <link rel="stylesheet" href="css/cadastro.css">    
+    <link rel="stylesheet" href="/css/cadastro.css">    
 </head>
 <body>
     <header>
-        <h1><a href="index.html">FUTTURE</a></h1>
+        <h1><a href="/index.html">FUTTURE</a></h1>
         <section class="menu-icon" id="menu-icon">&#9776;</section>
         <nav class="menu" id="menu">
-            <a href="index.html">Home</a>
-            <a href="index.html#about">Sobre Nós</a>
-            <a href="index.html#servicos">Serviços</a>
-            <a href="index.html#contato">Contato</a>
+            <a href="/index.html">Home</a>
+            <a href="/index.html#about">Sobre Nós</a>
+            <a href="/index.html#servicos">Serviços</a>
+            <a href="/index.html#contato">Contato</a>
         </nav>
     </header>
     
@@ -46,7 +46,7 @@
             <p id="mensagem"></p>
         </section>
     </main>
-    <script type="text/javascript" src="javascript/hamburguer.js"></script>
+    <script type="text/javascript" src="/javascript/hamburguer.js"></script>
     <script>
         function passwordConfirmation(event) {
     event.preventDefault();
@@ -59,7 +59,7 @@
 
     if (valuePassword === valueConfirmPassword) {
         
-        window.location.href = "html/escolha.html";
+        window.location.href = "/html/escolha.html";
         return false; 
     } else {
         document.getElementById("mensagem").innerHTML = "O campo de confirmar a senha está errado!";
