@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.profile-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.cover-photo {
+    height: 350px;
+    background: linear-gradient(45deg, #3498db, #2c3e50);
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.edit-cover-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+}
+
+.avatar-container {
+    position: relative;
+    margin-right: 30px;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-avatar-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-avatar-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.player-details {
+    flex-grow: 1;
+}
+
+.player-details h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.player-meta {
+    font-size: 16px;
+    color: #666;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin-right: 15px;
+    color: var(--primary-color);
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+}
+
+.edit-profile-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.profile-content {
+    padding: 20px 40px;
+}
+
+.content-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.right-column {
+    flex: 1;
+}
+
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.profile-section h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+.stat-value {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.media-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.media-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.media-item img,
+.media-item video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.media-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.media-item:hover .media-overlay {
+    opacity: 1;
+}
